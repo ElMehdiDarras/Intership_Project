@@ -25,6 +25,11 @@ Route::get('/dashboard', function () {
 
 Route::resource('boats', BoatController::class);
 
+
+Route::get('/boats/create', [BoatController::class, 'create']);
+Route::post('/boats', [BoatController::class, 'store']);
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
