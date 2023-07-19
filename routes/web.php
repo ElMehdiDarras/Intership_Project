@@ -25,9 +25,11 @@ Route::get('/dashboard', function () {
 
 Route::resource('boats', BoatController::class);
 
-
-Route::get('/boats/create', [BoatController::class, 'create']);
 Route::post('/boats', [BoatController::class, 'store']);
+Route::get('/boats/create', [BoatController::class, 'create']);
+Route::post('/boats', [BoatController::class, 'store'])->name('boats.store');
+
+
 
 
 Route::middleware('auth')->group(function () {
