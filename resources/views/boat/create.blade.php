@@ -6,7 +6,13 @@
         @csrf
         <label for="name">Boat Name:</label>
         <input type="text" id="name" name="name">
-        <!-- Add other fields as necessary -->
+
+        <label for="visit_count">Visit Count:</label>
+        <input type="number" id="visit_count" name="visit_count">
+
+        <label for="merchandise_type">Merchandise Type:</label>
+        <input type="text" id="merchandise_type" name="merchandise_type">
+
         <button type="submit">Add Boat</button>
     </form>
 @endsection
